@@ -3,7 +3,7 @@ import { FaSearch, FaShoppingBag, FaSignInAlt, FaSignOutAlt, FaUser } from "reac
 import { Link } from "react-router-dom"
 import logo from "../assets/logo.png"
 // ! ADD FOR THE TESTING PURPOSE
-const user = { _id: "21212", role: "admin" }
+const user = { _id: "1111", role: "" }
 function Header() {
 
 

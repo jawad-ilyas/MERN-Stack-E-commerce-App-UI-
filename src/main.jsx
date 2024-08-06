@@ -13,12 +13,15 @@ const Cart = lazy(() => import('./pages/Cart/Cart.jsx'))
 
 // * BASICALLY SETUP OF THE REACT ROUTER DOM 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Loader from './components/Loader.jsx'
-import Order from './pages/Orders/Order.jsx'
-import Login from './pages/Login/Login.jsx'
-import Menu from './pages/Menu/Menu.jsx'
-import Contact from './pages/Contact/Contact.jsx'
-import About from './pages/About/About.jsx'
+const Loader = lazy(() => import('./components/Loader.jsx'))
+const Order = lazy(() => import('./pages/Orders/Order.jsx'))
+const Menu = lazy(() => import('./pages/Menu/Menu.jsx'))
+const Contact = lazy(() => import('./pages/Contact/Contact.jsx'))
+const About = lazy(() => import('./pages/About/About.jsx'))
+// ! Logged In User Routes
+const Shipping = lazy(() => import('./pages/Shipping/Shipping.jsx'))
+// ! Not Login User
+const Login = lazy(() => import('./pages/Login/Login.jsx'))
 const router = createBrowserRouter([
 
   {
@@ -55,12 +58,7 @@ const router = createBrowserRouter([
         </Suspense>
       }
       ,
-      {
-        path: "login",
-        element: <Suspense fallback={<Loader />}>
-          <Login />
-        </Suspense>
-      },
+
       {
         path: "menu",
         element: <Suspense fallback={<Loader />}>
@@ -78,7 +76,21 @@ const router = createBrowserRouter([
         element: <Suspense fallback={<Loader />}>
           <Contact />
         </Suspense>
+      },
+      // ! Logged In User Routes
+      {
+        path: "shipping",
+        element: <Suspense fallback={<Loader />}>
+          <Shipping />
+        </Suspense>
       }
+      // ! Not Logged In Route
+      , {
+        path: "login",
+        element: <Suspense fallback={<Loader />}>
+          <Login />
+        </Suspense>
+      },
     ]
 
   }

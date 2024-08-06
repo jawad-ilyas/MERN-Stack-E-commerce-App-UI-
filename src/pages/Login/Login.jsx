@@ -1,8 +1,35 @@
 import React from 'react'
+import { useForm } from "react-hook-form";
+import { FcGoogle } from 'react-icons/fc';
 
 function Login() {
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
   return (
-    <div>Login</div>
+    <div className='container '>
+      <main className='max-w-md mx-auto ' >
+        <h1 className='text-4xl text-center  my-5 font-semibold'>
+          Login
+        </h1>
+        <form className=' flex flex-col space-y-4' onSubmit={handleSubmit(onSubmit)}>
+
+          <select className='border border-gray-600 outline-none py-2  rounded-md px-3' {...register("country")}>
+            <option defaultValue className='text-gray-50' value="">Select Your Country</option>
+            <option value="pakistan">pakistan</option>
+            <option value="india">india</option>
+            <option value="bangladesh">bangladesh</option>
+          </select>
+
+          <input placeholder='Pin Code ' type='number' className='border border-gray-600 outline-none py-2  rounded-md px-3' {...register("pincode",)} />
+
+          <input type="submit" value={"Login"} className='border border-gray-600 outline-none py-2  rounded-md px-3 bg-gray-900 text-white cursor-pointer' />
+        </form>
+        <div className='w-full border border-gray-300 bg-white my-4 shadow-xl  rounded-lg flex items-center justify-center'>
+          <button className='  px-4 '><FcGoogle size={30} /> </button>
+          <span className='w-full px-4 py-2 text-white bg-blue-500 text-lg '>Login With Google</span>
+        </div>
+      </main>
+    </div >
   )
 }
 

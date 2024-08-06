@@ -7,3 +7,6 @@
  npx tailwindcss init -p
  npm i react-chartjs-2 chart.js
 npm install react-multi-carousel --save
+npm install react-hook-form
+npm install react-table
+npm install @tanstack/react-table
