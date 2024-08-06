@@ -1,0 +1,88 @@
+const products = [
+    {
+        productId: "1111",
+        name: "Cheese Pizza",
+        photo: "https://picsum.photos/200/300?random=1",
+        price: 1200,
+        stock: 15,
+    },
+    {
+        productId: "1112",
+        name: "Burger",
+        photo: "https://picsum.photos/200/300?random=2",
+        price: 800,
+        stock: 20,
+    },
+    {
+        productId: "1113",
+        name: "Pasta",
+        photo: "https://picsum.photos/200/300?random=3",
+        price: 950,
+        stock: 25,
+    },
+    {
+        productId: "1114",
+        name: "Salad",
+        photo: "https://picsum.photos/200/300?random=4",
+        price: 500,
+        stock: 30,
+    },
+    {
+        productId: "1115",
+        name: "Steak",
+        photo: "https://picsum.photos/200/300?random=5",
+        price: 1800,
+        stock: 10,
+    },
+    {
+        productId: "1116",
+        name: "Sushi",
+        photo: "https://picsum.photos/200/300?random=6",
+        price: 1400,
+        stock: 15,
+    },
+    {
+        productId: "1117",
+        name: "Tacos",
+        photo: "https://picsum.photos/200/300?random=7",
+        price: 700,
+        stock: 25,
+    },
+    {
+        productId: "1118",
+        name: "Fried Chicken",
+        photo: "https://picsum.photos/200/300?random=8",
+        price: 900,
+        stock: 20,
+    },
+    {
+        productId: "1119",
+        name: "Ice Cream",
+        photo: "https://picsum.photos/200/300?random=9",
+        price: 400,
+        stock: 40,
+    },
+    {
+        productId: "1120",
+        name: "Pancakes",
+        photo: "https://picsum.photos/200/300?random=10",
+        price: 600,
+        stock: 30,
+    },
+    {
+        productId: "1119",
+        name: "Ice Cream",
+        photo: "https://picsum.photos/200/300?random=11",
+        price: 400,
+        stock: 40,
+    },
+    {
+        productId: "1120",
+        name: "Pancakes",
+        photo: "https://picsum.photos/200/300?random=12",
+        price: 600,
+        stock: 30,
+    },
+];
+
+export default products;

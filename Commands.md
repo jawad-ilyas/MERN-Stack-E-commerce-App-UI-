@@ -5,4 +5,5 @@
  npm i react-table
  npm install -D tailwindcss postcss autoprefixer
  npx tailwindcss init -p
-
+ npm i react-chartjs-2 chart.js
+npm install react-multi-carousel --save
